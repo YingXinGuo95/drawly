@@ -1,0 +1,58 @@
+import type { Team } from "./types";
+
+/**
+ * 2026 世界杯 48 支参赛球队（数据基于 FIFA 已确认参赛名单）
+ * 国旗使用 emoji，跨平台显示稳定
+ */
+export const TEAMS: Team[] = [
+  { id: "algeria", name: "Algeria", flag: "🇩🇿" },
+  { id: "argentina", name: "Argentina", flag: "🇦🇷" },
+  { id: "australia", name: "Australia", flag: "🇦🇺" },
+  { id: "austria", name: "Austria", flag: "🇦🇹" },
+  { id: "belgium", name: "Belgium", flag: "🇧🇪" },
+  { id: "bosnia-herzegovina", name: "Bosnia-Herzegovina", flag: "🇧🇦" },
+  { id: "brazil", name: "Brazil", flag: "🇧🇷" },
+  { id: "canada", name: "Canada", flag: "🇨🇦" },
+  { id: "cape-verde", name: "Cape Verde", flag: "🇨🇻" },
+  { id: "colombia", name: "Colombia", flag: "🇨🇴" },
+  { id: "congo-dr", name: "Congo DR", flag: "🇨🇩" },
+  { id: "croatia", name: "Croatia", flag: "🇭🇷" },
+  { id: "curacao", name: "Curaçao", flag: "🇨🇼" },
+  { id: "czech-republic", name: "Czech Republic", flag: "🇨🇿" },
+  { id: "ecuador", name: "Ecuador", flag: "🇪🇨" },
+  { id: "egypt", name: "Egypt", flag: "🇪🇬" },
+  { id: "england", name: "England", flag: "ENG" },
+  { id: "france", name: "France", flag: "🇫🇷" },
+  { id: "germany", name: "Germany", flag: "🇩🇪" },
+  { id: "ghana", name: "Ghana", flag: "🇬🇭" },
+  { id: "haiti", name: "Haiti", flag: "🇭🇹" },
+  { id: "iran", name: "Iran", flag: "🇮🇷" },
+  { id: "iraq", name: "Iraq", flag: "🇮🇶" },
+  { id: "ivory-coast", name: "Ivory Coast", flag: "🇨🇮" },
+  { id: "japan", name: "Japan", flag: "🇯🇵" },
+  { id: "jordan", name: "Jordan", flag: "🇯🇴" },
+  { id: "mexico", name: "Mexico", flag: "🇲🇽" },
+  { id: "morocco", name: "Morocco", flag: "🇲🇦" },
+  { id: "netherlands", name: "Netherlands", flag: "🇳🇱" },
+  { id: "new-zealand", name: "New Zealand", flag: "🇳🇿" },
+  { id: "norway", name: "Norway", flag: "🇳🇴" },
+  { id: "panama", name: "Panama", flag: "🇵🇦" },
+  { id: "paraguay", name: "Paraguay", flag: "🇵🇾" },
+  { id: "portugal", name: "Portugal", flag: "🇵🇹" },
+  { id: "qatar", name: "Qatar", flag: "🇶🇦" },
+  { id: "saudi-arabia", name: "Saudi Arabia", flag: "🇸🇦" },
+  { id: "scotland", name: "Scotland", flag: "SCO" },
+  { id: "senegal", name: "Senegal", flag: "🇸🇳" },
+  { id: "south-africa", name: "South Africa", flag: "🇿🇦" },
+  { id: "south-korea", name: "South Korea", flag: "🇰🇷" },
+  { id: "spain", name: "Spain", flag: "🇪🇸" },
+  { id: "sweden", name: "Sweden", flag: "🇸🇪" },
+  { id: "switzerland", name: "Switzerland", flag: "🇨🇭" },
+  { id: "tunisia", name: "Tunisia", flag: "🇹🇳" },
+  { id: "turkey", name: "Turkey", flag: "🇹🇷" },
+  { id: "united-states", name: "United States", flag: "🇺🇸" },
+  { id: "uruguay", name: "Uruguay", flag: "🇺🇾" },
+  { id: "wales", name: "Wales", flag: "WAL" },
+];
+
+export const TOTAL_TEAMS = TEAMS.length;
