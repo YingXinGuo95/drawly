@@ -2,10 +2,10 @@
 
 import { useMemo, useState } from "react";
 import { Table, LayoutGrid, ArrowUpDown, Medal } from "lucide-react";
-import { useDrawly } from "@/lib/drawly/context";
-import { prizesForTemplate } from "@/lib/drawly/prizes";
+import { useDrawly } from "./drawly-context";
+import { prizesForTemplate } from "../_lib/prizes";
 import { cn } from "@/lib/utils";
-import type { Assignment } from "@/lib/drawly/types";
+import type { Assignment } from "../_lib/types";
 
 type SortKey = "team" | "participant";
 type SortDir = "asc" | "desc";

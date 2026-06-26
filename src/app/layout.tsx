@@ -3,18 +3,18 @@ import { Inter } from "next/font/google";
 import { cn } from "@/lib/utils";
 import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
-import { DrawlyProvider } from "@/lib/drawly/context";
+import { DrawlyProvider } from "@/app/tools/world-cup-2026-sweepstake/_components/drawly-context";
 import "./globals.css";
 
 const inter = Inter({ subsets: ["latin"], variable: "--font-sans" });
 
-const SITE_URL = "https://drawly.app";
+const SITE_URL = "https://fairdraw.online";
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
   title: {
-    default: "Drawly — Fair Random Draw Tool Platform",
-    template: "%s | Drawly",
+    default: "fairdraw — Fair Random Draw Tool Platform",
+    template: "%s | fairdraw",
   },
   description:
     "Fair, fast, and fun random draws for sweepstakes, team assignments, and more. Cryptographically fair, no signup needed, shareable results.",
@@ -27,19 +27,19 @@ export const metadata: Metadata = {
     "draw generator online",
     "free random draw",
   ],
-  authors: [{ name: "Drawly" }],
-  creator: "Drawly",
+  authors: [{ name: "fairdraw" }],
+  creator: "fairdraw",
   openGraph: {
-    title: "Drawly — Fair Random Draw Tool Platform",
+    title: "fairdraw — Fair Random Draw Tool Platform",
     description:
       "Fair random draws for sweepstakes, team assignments, and more. Free, no signup.",
     type: "website",
     locale: "en_US",
-    siteName: "Drawly",
+    siteName: "fairdraw",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Drawly — Fair Random Draw Tool Platform",
+    title: "fairdraw — Fair Random Draw Tool Platform",
     description:
       "Fair random draws for sweepstakes, team assignments, and more.",
   },
@@ -58,7 +58,7 @@ export const metadata: Metadata = {
 const jsonLd = {
   "@context": "https://schema.org",
   "@type": "WebApplication",
-  name: "Drawly",
+  name: "fairdraw",
   applicationCategory: "UtilityApplication",
   operatingSystem: "Any",
   description:

@@ -1,15 +1,15 @@
 "use client";
 
 import { Trophy, Settings2, Plus, Trash2 } from "lucide-react";
-import { useDrawly } from "@/lib/drawly/context";
+import { useDrawly } from "./drawly-context";
 import {
   CLASSIC_PRIZES,
   CUSTOM_PRIZES_DEFAULT,
   SIMPLE_PRIZES,
   prizesForTemplate,
   totalPercent,
-} from "@/lib/drawly/prizes";
-import type { Prize, PrizeTemplate } from "@/lib/drawly/types";
+} from "../_lib/prizes";
+import type { Prize, PrizeTemplate } from "../_lib/types";
 import { cn } from "@/lib/utils";
 
 const TEMPLATES: Array<{

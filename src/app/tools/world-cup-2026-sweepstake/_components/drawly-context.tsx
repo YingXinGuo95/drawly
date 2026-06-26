@@ -8,8 +8,8 @@ import {
   type Dispatch,
   type ReactNode,
 } from "react";
-import { CUSTOM_PRIZES_DEFAULT } from "./prizes";
-import type { Action, DrawlyState } from "./types";
+import { CUSTOM_PRIZES_DEFAULT } from "../_lib/prizes";
+import type { Action, DrawlyState } from "../_lib/types";
 
 const STORAGE_KEY = "drawly-state-v1";
 

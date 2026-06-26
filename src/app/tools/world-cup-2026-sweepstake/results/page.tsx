@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { ResultsPage } from "@/components/wc-results/ResultsPage";
+import { ResultsPage } from "../_components/ResultsPage";
 
 export const metadata: Metadata = {
   title: "Results — World Cup 2026 Sweepstake",

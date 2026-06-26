@@ -10,8 +10,8 @@ import {
   Link as LinkIcon,
 } from "lucide-react";
 import Link from "next/link";
-import { useDrawly } from "@/lib/drawly/context";
-import { buildShareUrl } from "@/lib/drawly/share";
+import { useDrawly } from "./drawly-context";
+import { buildShareUrl } from "../_lib/share";
 import { cn } from "@/lib/utils";
 
 export function ShareActions() {

@@ -1,10 +1,10 @@
 "use client";
 
 import { Wand2, Users, Shuffle, Plus, Minus } from "lucide-react";
-import { useDrawly } from "@/lib/drawly/context";
-import { TOTAL_TEAMS } from "@/lib/drawly/teams";
-import { recommendMode } from "@/lib/drawly/shuffle";
-import type { AssignmentMode } from "@/lib/drawly/types";
+import { useDrawly } from "./drawly-context";
+import { TOTAL_TEAMS } from "../_lib/teams";
+import { recommendMode } from "../_lib/shuffle";
+import type { AssignmentMode } from "../_lib/types";
 import { cn } from "@/lib/utils";
 
 const MODES: Array<{

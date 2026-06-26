@@ -1,7 +1,7 @@
 "use client";
 
-import { useDrawly } from "@/lib/drawly/context";
-import { prizesForTemplate } from "@/lib/drawly/prizes";
+import { useDrawly } from "./drawly-context";
+import { prizesForTemplate } from "../_lib/prizes";
 
 /**
  * 打印专用的 A4 版式
@@ -68,7 +68,7 @@ export function PrintView() {
         </section>
 
         <footer className="mt-8 border-t border-black pt-2 text-center text-xs text-gray-700">
-          Created with Drawly · drawly.app
+          Created with fairdraw · fairdraw.online
         </footer>
       </div>
     </div>

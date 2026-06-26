@@ -3,8 +3,8 @@
 import { useEffect, useRef } from "react";
 import { Users, Trash2, Sparkles } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { useDrawly } from "@/lib/drawly/context";
-import { parseParticipants } from "@/lib/drawly/shuffle";
+import { useDrawly } from "./drawly-context";
+import { parseParticipants } from "../_lib/shuffle";
 
 const EXAMPLE = `Alice
 Bob

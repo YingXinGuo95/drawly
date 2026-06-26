@@ -10,10 +10,10 @@ export function Footer() {
               <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-gradient-to-br from-blue-500 to-purple-600 text-sm font-bold text-white">
                 D
               </div>
-              <span className="text-base font-bold text-white">Drawly</span>
+              <span className="text-base font-bold text-white">fairdraw</span>
             </div>
             <p className="text-sm text-white/60">
-              The fairest way to run random draws. Free, no
+              The fairest way to run fair draws. Free, no
               signup, no tracking.
             </p>
           </div>
@@ -55,7 +55,7 @@ export function Footer() {
 
         <div className="mt-10 border-t border-white/10 pt-6 text-center text-xs text-white/40">
           <p>
-            Drawly &mdash; Fair random draws for every occasion. &copy;{" "}
+            fairdraw &mdash; Fair random draws for every occasion. &copy;{" "}
             {new Date().getFullYear()}
           </p>
         </div>

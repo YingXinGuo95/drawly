@@ -1,10 +1,9 @@
 "use client";
 
 import { Sparkles, Flag, Trophy } from "lucide-react";
-import { useDrawly } from "@/lib/drawly/context";
-import { TOTAL_TEAMS } from "@/lib/drawly/teams";
-import { assignTeams, recommendMode } from "@/lib/drawly/shuffle";
-import { TEAMS } from "@/lib/drawly/teams";
+import { useDrawly } from "./drawly-context";
+import { TOTAL_TEAMS, TEAMS } from "../_lib/teams";
+import { assignTeams, recommendMode } from "../_lib/shuffle";
 import { useRouter } from "next/navigation";
 import { useState } from "react";
 

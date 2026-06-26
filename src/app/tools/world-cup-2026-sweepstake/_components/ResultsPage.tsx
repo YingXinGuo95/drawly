@@ -1,12 +1,12 @@
 "use client";
 
 import { useEffect } from "react";
-import { ResultsView } from "@/components/wc-results/ResultsView";
-import { ShareActions } from "@/components/wc-results/ShareActions";
-import { PrintView } from "@/components/wc-results/PrintView";
-import { useDrawly } from "@/lib/drawly/context";
-import { decodeShareLink } from "@/lib/drawly/share";
-import { TEAMS } from "@/lib/drawly/teams";
+import { ResultsView } from "./ResultsView";
+import { ShareActions } from "./ShareActions";
+import { PrintView } from "./PrintView";
+import { useDrawly } from "./drawly-context";
+import { decodeShareLink } from "../_lib/share";
+import { TEAMS } from "../_lib/teams";
 import { Trophy, Sparkles, PartyPopper } from "lucide-react";
 import Link from "next/link";
 

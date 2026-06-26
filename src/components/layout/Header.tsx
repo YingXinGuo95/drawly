@@ -1,8 +1,10 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { usePathname } from "next/navigation";
 import { cn } from "@/lib/utils";
+import logo from "@/public/logo.png";
 
 const NAV = [
   { href: "/", label: "Home" },
@@ -16,16 +18,15 @@ export function Header() {
     <header className="sticky top-0 z-50 w-full border-b border-white/10 bg-slate-950/80 backdrop-blur-xl">
       <div className="container mx-auto flex h-16 items-center justify-between px-4">
         <Link href="/" className="group flex items-center gap-2.5">
-          <div className="relative flex h-9 w-9 items-center justify-center overflow-hidden rounded-xl bg-gradient-to-br from-blue-500 to-purple-600 text-white shadow-glow-blue transition-all duration-300 group-hover:shadow-glow-purple group-hover:scale-105">
-            <span className="text-base font-bold">D</span>
-            <div className="absolute inset-0 bg-gradient-to-tr from-transparent via-white/20 to-transparent" />
+          <div className="relative flex h-9 w-9 items-center justify-center overflow-hidden rounded-xl transition-all duration-300 group-hover:scale-105">
+            <Image src={logo} alt="fairdraw" className="h-full w-full object-cover" />
           </div>
           <div className="flex flex-col leading-none">
             <span className="text-base font-bold tracking-tight text-white">
-              Drawly
+              fairdraw
             </span>
             <span className="text-[10px] uppercase tracking-wider text-white/50">
-              Fair Random Draws
+              Fair Draws
             </span>
           </div>
         </Link>
