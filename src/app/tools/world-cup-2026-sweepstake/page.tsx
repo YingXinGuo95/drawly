@@ -3,12 +3,14 @@ import { ParticipantInput } from "./_components/ParticipantInput";
 import { ModeSelector } from "./_components/ModeSelector";
 import { PrizeSetup } from "./_components/PrizeSetup";
 import { GeneratePanel } from "./_components/GeneratePanel";
+import { SeoContent } from "./_components/SeoContent";
+import { FAQSection } from "./_components/FAQSection";
 import { TOTAL_TEAMS } from "./_lib/teams";
 
 export const metadata: Metadata = {
   title: "World Cup 2026 Sweepstake Generator",
   description:
-    "Fairly assign all 48 World Cup 2026 teams to your group. Add participants, choose a mode, and generate a cryptographically fair draw.",
+    "Run a World Cup 2026 sweepstake with friends and family. Add participants, pick a mode, and generate a fair draw for all 48 teams. Free, no signup needed.",
 };
 
 export default function WorldCupSweepstakePage() {
@@ -83,6 +85,10 @@ export default function WorldCupSweepstakePage() {
           </div>
         </div>
       </div>
+
+      {/* SEO content */}
+      <SeoContent />
+      <FAQSection />
     </div>
   );
 }

@@ -8,7 +8,7 @@ import "./globals.css";
 
 const inter = Inter({ subsets: ["latin"], variable: "--font-sans" });
 
-const SITE_URL = "https://fairdraw.online";
+const SITE_URL = "https://www.fairdraw.online";
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
