@@ -7,6 +7,7 @@ import { cn } from "@/lib/utils";
 
 const NAV = [
   { href: "/", label: "Home" },
+  { href: "/tools/random-birthday-generator", label: "Birthdays" },
   { href: "/tools/world-cup-2026-sweepstake", label: "WC 2026" },
 ];
 

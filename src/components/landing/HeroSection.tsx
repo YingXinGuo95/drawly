@@ -4,7 +4,7 @@ import {
   Sparkles,
   Trophy,
   Users,
-  Shuffle,
+  Cake,
 } from "lucide-react";
 
 const TOOLS = [
@@ -17,13 +17,12 @@ const TOOLS = [
     iconColor: "text-blue-300",
   },
   {
-    href: "#",
-    icon: Shuffle,
-    title: "Spin the",
-    subtitle: "Wheel",
-    gradient: "from-purple-500/20 to-pink-500/10",
-    iconColor: "text-purple-300",
-    soon: true,
+    href: "/tools/random-birthday-generator",
+    icon: Cake,
+    title: "Random Birthday",
+    subtitle: "Generator",
+    gradient: "from-pink-500/20 to-purple-500/10",
+    iconColor: "text-pink-300",
   },
   {
     href: "#",
@@ -79,14 +78,11 @@ export function HeroSection() {
           className="mt-10 flex animate-fade-in flex-col items-center justify-center gap-4 sm:flex-row"
           style={{ animationDelay: "0.2s" }}
         >
-          <Link
-            href="/tools/world-cup-2026-sweepstake"
-            className="btn-glow group flex items-center gap-2"
-          >
+          <a href="#popular-tools" className="btn-glow group flex items-center gap-2">
             <Sparkles className="h-4 w-4 transition-transform duration-300 group-hover:rotate-12" />
             Start drawing now
             <ArrowRight className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-0.5" />
-          </Link>
+          </a>
           <a href="#how-it-works" className="btn-glass">
             See how it works
           </a>
@@ -94,35 +90,59 @@ export function HeroSection() {
 
         {/* Popular tools cards */}
         <div
-          className="mx-auto mt-16 max-w-3xl animate-fade-in"
+          id="popular-tools"
+          className="mx-auto mt-20 max-w-4xl animate-fade-in scroll-mt-24"
           style={{ animationDelay: "0.3s" }}
         >
-          <p className="mb-5 text-xs font-semibold uppercase tracking-widest text-white/40">
-            Popular tools
+          <p className="mb-8 text-center text-xs font-semibold uppercase tracking-[0.2em] text-white/40">
+            — Popular tools —
           </p>
-          <div className="grid gap-4 sm:grid-cols-3">
+          <p className="-mt-4 mb-8 text-center text-sm text-white/40 animate-fade-in">
+            <span className="inline-flex items-center gap-1.5">
+              <span className="relative flex h-2 w-2">
+                <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-blue-400 opacity-75" />
+                <span className="relative inline-flex h-2 w-2 rounded-full bg-blue-400" />
+              </span>
+              Click any tool below to get started
+            </span>
+          </p>
+          <div className="grid gap-5 sm:grid-cols-3">
             {TOOLS.map((tool) => (
               <Link
                 key={tool.title}
                 href={tool.href}
-                className={`group relative overflow-hidden rounded-2xl border border-white/10 bg-slate-900/60 p-5 text-left transition-all duration-300 hover:border-white/20 hover:bg-white/[0.08] card-lift ${
-                  tool.soon ? "pointer-events-none opacity-60" : ""
+                className={`group relative overflow-hidden rounded-2xl border border-white/[0.06] bg-gradient-to-b from-slate-800/50 to-slate-900/60 p-6 text-left transition-all duration-500 hover:border-white/[0.15] ${
+                  tool.soon ? "pointer-events-none opacity-50" : "hover:-translate-y-1 hover:shadow-2xl hover:shadow-blue-500/5"
                 }`}
               >
-                <div className={`absolute -right-6 -top-6 h-20 w-20 rounded-full bg-gradient-to-br ${tool.gradient} blur-xl transition-all duration-500 group-hover:scale-150`} />
-                <div className="relative">
-                  <div className={`mb-3 inline-flex h-10 w-10 items-center justify-center rounded-lg bg-white/5 ring-1 ring-white/10 transition-all duration-300 group-hover:ring-white/20 group-hover:bg-white/10`}>
-                    <tool.icon className={`h-5 w-5 ${tool.iconColor} transition-transform duration-300 group-hover:scale-110`} />
+                {/* Hover glow backdrop */}
+                <div className={`absolute -inset-x-20 -inset-y-20 scale-0 rounded-full bg-gradient-to-br ${tool.gradient} opacity-0 blur-3xl transition-all duration-700 group-hover:scale-100 group-hover:opacity-100`} />
+
+                {/* Gradient orb decoration */}
+                <div className={`absolute -right-8 -top-8 h-24 w-24 rounded-full bg-gradient-to-br ${tool.gradient} blur-2xl transition-all duration-500 group-hover:scale-[2] group-hover:opacity-80`} />
+
+                {/* Inner content */}
+                <div className="relative z-10">
+                  {/* Icon */}
+                  <div className={`relative mb-5 inline-flex h-14 w-14 items-center justify-center rounded-xl bg-gradient-to-br ${tool.gradient} ring-1 ring-white/[0.08] transition-all duration-500 group-hover:scale-110 group-hover:ring-white/[0.15] group-hover:shadow-lg`}>
+                    <tool.icon className={`h-7 w-7 ${tool.iconColor} transition-transform duration-500 group-hover:scale-110`} />
                   </div>
-                  <h3 className="text-sm font-semibold text-white">
+
+                  {/* Title */}
+                  <h3 className="text-base font-semibold text-white transition-colors duration-300 group-hover:text-white">
                     {tool.title}
                   </h3>
-                  <p className="flex items-center gap-1.5 text-xs text-white/50">
+
+                  {/* Subtitle row */}
+                  <p className="mt-1 flex items-center gap-1.5 text-sm text-white/50 transition-colors duration-300 group-hover:text-white/70">
                     {tool.subtitle}
                     {tool.soon && (
                       <span className="rounded-full border border-yellow-500/30 bg-yellow-500/10 px-2 py-0.5 text-[10px] font-medium text-yellow-300">
                         Soon
                       </span>
+                    )}
+                    {!tool.soon && (
+                      <ArrowRight className="h-3.5 w-3.5 transition-all duration-300 group-hover:translate-x-1 group-hover:text-blue-400" />
                     )}
                   </p>
                 </div>

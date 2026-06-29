@@ -25,13 +25,21 @@ export function Footer() {
             <ul className="space-y-2 text-sm">
               <li>
                 <Link
+                  href="/tools/random-birthday-generator"
+                  className="text-white/70 transition-colors hover:text-white"
+                >
+                  Random Birthday Generator
+                </Link>
+              </li>
+              <li>
+                <Link
                   href="/tools/world-cup-2026-sweepstake"
                   className="text-white/70 transition-colors hover:text-white"
                 >
                   WC 2026 Sweepstake
                 </Link>
               </li>
-<li>
+              <li>
                 <Link
                   href="/tools/world-cup-2026-sweepstake/results"
                   className="text-white/70 transition-colors hover:text-white"
