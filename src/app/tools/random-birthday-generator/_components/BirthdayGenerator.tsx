@@ -274,10 +274,12 @@ export default function BirthdayGenerator() {
                   type="number"
                   min={0}
                   max={maxAge}
-                  value={minAge}
+                  value={minAge || ""}
                   onChange={(e) => {
-                    const v = Number(e.target.value) || 0;
-                    setMinAge(Math.max(0, Math.min(maxAge, v)));
+                    setMinAge(e.target.value === "" ? 0 : Number(e.target.value));
+                  }}
+                  onBlur={() => {
+                    setMinAge(Math.max(0, Math.min(maxAge, minAge)));
                   }}
                   className="w-full rounded-lg border border-white/10 bg-slate-950/40 px-4 py-2.5 text-sm text-white placeholder:text-white/30 focus:border-blue-400/50 focus:outline-none focus:ring-2 focus:ring-blue-400/30"
                 />
@@ -293,10 +295,12 @@ export default function BirthdayGenerator() {
                   type="number"
                   min={minAge}
                   max={120}
-                  value={maxAge}
+                  value={maxAge || ""}
                   onChange={(e) => {
-                    const v = Number(e.target.value) || 0;
-                    setMaxAge(Math.max(minAge, Math.min(120, v)));
+                    setMaxAge(e.target.value === "" ? 0 : Number(e.target.value));
+                  }}
+                  onBlur={() => {
+                    setMaxAge(Math.max(minAge, Math.min(120, maxAge)));
                   }}
                   className="w-full rounded-lg border border-white/10 bg-slate-950/40 px-4 py-2.5 text-sm text-white placeholder:text-white/30 focus:border-blue-400/50 focus:outline-none focus:ring-2 focus:ring-blue-400/30"
                 />
